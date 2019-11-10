@@ -11,8 +11,7 @@ public class AppCoonection {
         System.out.println("My connection: ".concat(JdbcConnection.getConnection().toString()));
 
         PersonDAO dao = new PersonDAO();
-
-        dao.save(new Person("Jonathan Souza", "00000000000"));
+        dao.findAll().forEach(person -> System.out.println(person.getName()));
     }
 
 }
